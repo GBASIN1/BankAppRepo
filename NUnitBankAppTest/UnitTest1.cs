@@ -32,6 +32,7 @@ namespace NunitTestBankApp
                 //check now
                 DataTable dt = new DataTable();
                 bool bSucess = blCustomerData.MinCustomerCountCheck(10);
+                bSucess = false;
                 Assert.AreEqual(bSucess, true);
             }
             catch (Exception ex)
