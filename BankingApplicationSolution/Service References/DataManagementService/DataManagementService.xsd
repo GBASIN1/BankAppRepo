@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataManagementService.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataManagementService.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:61087/DataManagementService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="TableSchema">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ColumnNames" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:ArrayOfCondition" />
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Values" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TableSchema" nillable="true" type="tns:TableSchema" />
+  <xs:complexType name="ArrayOfCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Condition" nillable="true" type="tns:Condition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCondition" nillable="true" type="tns:ArrayOfCondition" />
+  <xs:complexType name="Condition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConditionOperator" type="tns:Condition.Operator" />
+      <xs:element minOccurs="0" name="ConjunctionOperator" type="tns:Condition.Conjunction" />
+      <xs:element minOccurs="0" name="LeftOperand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RightOperand" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Condition" nillable="true" type="tns:Condition" />
+  <xs:simpleType name="Condition.Operator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="LessThanOrEqual" />
+      <xs:enumeration value="GreaterThanOrEqual" />
+      <xs:enumeration value="Equal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Condition.Operator" nillable="true" type="tns:Condition.Operator" />
+  <xs:simpleType name="Condition.Conjunction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="And" />
+      <xs:enumeration value="Or" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Condition.Conjunction" nillable="true" type="tns:Condition.Conjunction" />
+  <xs:complexType name="ResultSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NumberOfRowsAffected" type="xs:int" />
+      <xs:element minOccurs="0" name="Records" nillable="true" type="tns:ArrayOfRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultSet" nillable="true" type="tns:ResultSet" />
+  <xs:complexType name="ArrayOfRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Record" nillable="true" type="tns:Record" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecord" nillable="true" type="tns:ArrayOfRecord" />
+  <xs:complexType name="Record">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Columns" nillable="true" type="q3:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Record" nillable="true" type="tns:Record" />
+</xs:schema>

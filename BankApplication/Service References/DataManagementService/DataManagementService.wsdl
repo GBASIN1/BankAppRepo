@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataManagementService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/DataManagementService/DataManagementService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/DataManagementService/DataManagementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/DataManagementService/DataManagementService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataManagementService.Entity" />
+      <xsd:import schemaLocation="http://localhost/DataManagementService/DataManagementService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/DataManagementService/DataManagementService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataManagementService_GetDataFromTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFromTable" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_GetDataFromTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFromTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_AddCustomerDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_AddCustomerDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_GetCustomerDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_GetCustomerDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_InsertCustomerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCustomerData" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_InsertCustomerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCustomerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_GetCustomerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerList" />
+  </wsdl:message>
+  <wsdl:message name="IDataManagementService_GetCustomerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataManagementService">
+    <wsdl:operation name="GetDataFromTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataManagementService/GetDataFromTable" message="tns:IDataManagementService_GetDataFromTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataManagementService/GetDataFromTableResponse" message="tns:IDataManagementService_GetDataFromTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataManagementService/AddCustomerDetail" message="tns:IDataManagementService_AddCustomerDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataManagementService/AddCustomerDetailResponse" message="tns:IDataManagementService_AddCustomerDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataManagementService/GetCustomerDetails" message="tns:IDataManagementService_GetCustomerDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataManagementService/GetCustomerDetailsResponse" message="tns:IDataManagementService_GetCustomerDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataManagementService/InsertCustomerData" message="tns:IDataManagementService_InsertCustomerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataManagementService/InsertCustomerDataResponse" message="tns:IDataManagementService_InsertCustomerData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataManagementService/GetCustomerList" message="tns:IDataManagementService_GetCustomerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataManagementService/GetCustomerListResponse" message="tns:IDataManagementService_GetCustomerList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDataManagementService" type="tns:IDataManagementService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataFromTable">
+      <soap:operation soapAction="http://tempuri.org/IDataManagementService/GetDataFromTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDetail">
+      <soap:operation soapAction="http://tempuri.org/IDataManagementService/AddCustomerDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDetails">
+      <soap:operation soapAction="http://tempuri.org/IDataManagementService/GetCustomerDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerData">
+      <soap:operation soapAction="http://tempuri.org/IDataManagementService/InsertCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerList">
+      <soap:operation soapAction="http://tempuri.org/IDataManagementService/GetCustomerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataManagementService">
+    <wsdl:port name="BasicHttpBinding_IDataManagementService" binding="tns:BasicHttpBinding_IDataManagementService">
+      <soap:address location="http://localhost/DataManagementService/DataManagementService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

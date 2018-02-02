@@ -1,0 +1,133 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagementService", "DataManagementService\DataManagementService.csproj", "{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApplication", "BankApplication\BankApplication.csproj", "{98F0FD3D-9646-4B53-A1F6-C5A188436812}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64} = {2C16B6BD-30C0-43A4-BC35-AC440DF94C64}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAppWeb", "BankAppWeb\BankAppWeb.csproj", "{49EF4343-E7E7-45AB-9BD1-34C41513E82A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64} = {2C16B6BD-30C0-43A4-BC35-AC440DF94C64}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E099106B-A233-45C2-AAC4-42FC2131CE99}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApplication.UnitTest", "BankApplication.UnitTest\BankApplication.UnitTest.csproj", "{5B358842-4462-41DC-BE72-B92A90DBF815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApplication.NunitTest", "BankApplication.NunitTest\BankApplication.NunitTest.csproj", "{101E2451-7303-45DE-A201-2E0938B2A082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitBankAppTest", "NUnitBankAppTest\NUnitBankAppTest.csproj", "{9037B87B-9AC5-4A1A-992E-D5C16781F732}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2C16B6BD-30C0-43A4-BC35-AC440DF94C64}.Release|x86.ActiveCfg = Release|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{98F0FD3D-9646-4B53-A1F6-C5A188436812}.Release|x86.ActiveCfg = Release|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{49EF4343-E7E7-45AB-9BD1-34C41513E82A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Debug|x86.Build.0 = Debug|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B358842-4462-41DC-BE72-B92A90DBF815}.Release|x86.Build.0 = Release|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Debug|x86.Build.0 = Debug|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Release|x86.ActiveCfg = Release|Any CPU
+		{101E2451-7303-45DE-A201-2E0938B2A082}.Release|x86.Build.0 = Release|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Debug|x86.Build.0 = Debug|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Release|x86.ActiveCfg = Release|Any CPU
+		{9037B87B-9AC5-4A1A-992E-D5C16781F732}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://victadpst-03:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DataManagementService\\DataManagementService.csproj
+		SccProjectName1 = DataManagementService
+		SccLocalPath1 = DataManagementService
+		SccProjectUniqueName2 = BankApplication\\BankApplication.csproj
+		SccProjectName2 = BankApplication
+		SccLocalPath2 = BankApplication
+		SccProjectUniqueName3 = BankAppWeb\\BankAppWeb.csproj
+		SccProjectName3 = BankAppWeb
+		SccLocalPath3 = BankAppWeb
+		SccProjectUniqueName4 = BankApplication.UnitTest\\BankApplication.UnitTest.csproj
+		SccProjectName4 = BankApplication.UnitTest
+		SccLocalPath4 = BankApplication.UnitTest
+		SccProjectUniqueName5 = BankApplication.NunitTest\\BankApplication.NunitTest.csproj
+		SccProjectName5 = BankApplication.NunitTest
+		SccLocalPath5 = BankApplication.NunitTest
+		SccProjectUniqueName6 = NUnitBankAppTest\\NUnitBankAppTest.csproj
+		SccProjectName6 = NUnitBankAppTest
+		SccLocalPath6 = NUnitBankAppTest
+	EndGlobalSection
+EndGlobal
