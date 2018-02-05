@@ -50,7 +50,7 @@ namespace NunitTestBankApp
                 Assert.AreEqual(bsucess, false);
                 bsucess = blCustomerData.MinBalanceCheck(1500);
                 //comment below line
-                bsucess = false;
+               // bsucess = false;
                 Assert.AreEqual(bsucess, true);
             }
             catch (Exception ex)
