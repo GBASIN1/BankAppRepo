@@ -6,10 +6,8 @@
        [String] $VSTS_TeamProject = "BankingApplication"
 )
 
-$username="infy.devops.poc2@outlook.com"
-$password="vyg76y3zdxz4tx6pqe6qhreub4yc75ijzl77mvcduy3qw3fifbpa"
-#$username = "Arshdeep_singh02@infosys.com"
-#$password = "Infosys123"
+$username=""
+$password=""
 $basicAuth= ("{0}:{1}"-f $username,$password)
 $basicAuth=[System.Text.Encoding]::UTF8.GetBytes($basicAuth)
 $basicAuth=[System.Convert]::ToBase64String($basicAuth)
